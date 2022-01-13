@@ -1,4 +1,5 @@
 package com.spring;
 
-public class InitializingBean {
+public interface InitializingBean {
+    void afterPropertiesSet();
 }

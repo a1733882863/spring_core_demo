@@ -1,7 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="47b8379d-ccc6-4432-aaff-130325a41dc7" name="Default Changelist" comment="" />
+    <list default="true" id="47b8379d-ccc6-4432-aaff-130325a41dc7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/spring/BeanAwared.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/spring/BeanPostProcessor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/spring/InitializingBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xz/service/AllService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xz/service/XieZhiBeanPostProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/Autowired.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/Autowired.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/XieZhiApplicationContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/XieZhiApplicationContext.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xz/service/Orderservice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xz/service/Orderservice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/spring/XieZhiApplicationContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/spring/XieZhiApplicationContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/xz/service/Orderservice.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/xz/service/Orderservice.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,11 +30,14 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="AnnotationType" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -25,6 +48,7 @@
     </option>
   </component>
   <component name="ProjectId" id="23YOHsJXWqb3lnxF4kOUORyc0Gr" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="abbreviatePackageNames" value="true" />
     <option name="flattenPackages" value="true" />
@@ -117,74 +141,91 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1641907468990</updated>
-      <workItem from="1641907474220" duration="15852000" />
+      <workItem from="1641907474220" duration="31968000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="WindowStateProjectService">
     <state x="440" y="94" key="#Project_Structure" timestamp="1641907755910">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="440" y="94" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1641907755910" />
+    <state x="765" y="225" key="#com.intellij.ide.util.MemberChooser" timestamp="1642084706119">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="765" y="225" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1642084706119" />
+    <state x="409" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1642082425941">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="409" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1642082425941" />
+    <state width="515" height="466" key="DebuggerActiveHint" timestamp="1642085515553">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="515" height="466" key="DebuggerActiveHint/0.0.1920.1040@0.0.1920.1040" timestamp="1642085515553" />
     <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1641907744350">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1641907744350" />
-    <state width="1877" height="348" key="GridCell.Tab.0.bottom" timestamp="1641940509780">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1642085795475">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1641940509780" />
-    <state width="1877" height="348" key="GridCell.Tab.0.center" timestamp="1641940509780">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1642085795475" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1642085795475">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1641940509780" />
-    <state width="1877" height="348" key="GridCell.Tab.0.left" timestamp="1641940509780">
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1642085795475" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1642085795475">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1641940509780" />
-    <state width="1877" height="348" key="GridCell.Tab.0.right" timestamp="1641940509780">
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1642085795475" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1642085795475">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1641940509780" />
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1641940510157">
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1642085795475" />
+    <state width="1877" height="244" key="GridCell.Tab.1.bottom" timestamp="1642085583087">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1641940510157" />
-    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1641940510157">
+    <state width="1877" height="244" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1642085583087" />
+    <state width="1877" height="244" key="GridCell.Tab.1.center" timestamp="1642085583087">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1641940510157" />
-    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1641940510156">
+    <state width="1877" height="244" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1642085583087" />
+    <state width="1877" height="244" key="GridCell.Tab.1.left" timestamp="1642085583087">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1641940510156" />
-    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1641940510157">
+    <state width="1877" height="244" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1642085583087" />
+    <state width="1877" height="244" key="GridCell.Tab.1.right" timestamp="1642085583087">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1641940510157" />
+    <state width="1877" height="244" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1642085583087" />
     <state x="461" y="164" key="SettingsEditor" timestamp="1641907748718">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1641907748718" />
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1641943643162">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1641943643162" />
+    <state x="661" y="254" width="598" height="532" key="find.popup" timestamp="1642080088587">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="661" y="254" width="598" height="532" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1642080088587" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/spring/XieZhiApplicationContext.java</url>
-          <line>66</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/spring/XieZhiApplicationContext.java</url>
-          <line>60</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="scanPath.replaceAll(&quot;.&quot;, &quot;\\&quot;)" language="JAVA" />

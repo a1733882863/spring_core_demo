@@ -1,9 +1,13 @@
 package com.spring;
 
 
+import com.xz.service.XieZhiBeanPostProcessor;
+
 import java.io.File;
-import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Field;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -11,9 +15,10 @@ public class XieZhiApplicationContext {
 
     ConcurrentHashMap<String,BeanDifinition> beanDifinitionMap = new ConcurrentHashMap();
     ConcurrentHashMap<String,Object> singleObjectMap = new ConcurrentHashMap();
+    List<BeanPostProcessor> beanPostProcessorList = new ArrayList<>();
     Class<?> configclazz;
 
-    public XieZhiApplicationContext(Class<?> config) throws InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException {
+    public XieZhiApplicationContext(Class<?> config) throws Exception {
         this.configclazz = config;
         //扫描配置类生成BeanDefinition
         scan(configclazz);
@@ -42,9 +47,39 @@ public class XieZhiApplicationContext {
         return bean;
     }
 
-    private Object createBean(String beanName, BeanDifinition beanDifinition) throws NoSuchMethodException, IllegalAccessException, InvocationTargetException, InstantiationException {
+    private Object createBean(String beanName, BeanDifinition beanDifinition) throws Exception {
         Class clazz = beanDifinition.getClazz();
         Object instance = clazz.getConstructor().newInstance();
+
+        //Autowired
+        for (Field field : clazz.getDeclaredFields()) {
+            if (field.isAnnotationPresent(Autowired.class)) {
+                Object bean = getBean(field.getName());
+                field.set(instance,bean);
+            }
+        }
+
+        //Aware注解 回调
+        if (clazz.isAssignableFrom(BeanAwared.class)) {
+            ((BeanAwared) instance).setBeanName(beanName);
+        }
+
+        //BeanPostProcessor初始化前
+        for (BeanPostProcessor beanPostProcessor : beanPostProcessorList) {
+            instance = beanPostProcessor.postProcessBeforeInitialization(instance, beanName);
+        }
+
+        //InitializingBean 初始化
+        if (instance instanceof InitializingBean) {
+            ((InitializingBean) instance).afterPropertiesSet();
+        }
+
+        //BeanPostProcessor初始化后
+        for (BeanPostProcessor beanPostProcessor : beanPostProcessorList) {
+            instance = beanPostProcessor.postProcessAfterInitialization(instance, beanName);
+        }
+
+
         return instance;
     }
 
@@ -66,18 +101,24 @@ public class XieZhiApplicationContext {
             String beanName;
             try {
                 clazz = configclazz.getClassLoader().loadClass(javaPath4Create);
-                //前面已经获取到了java 的class 对象, 现在要开始对每个java class对象进行注解的解析
-                Component component = clazz.getDeclaredAnnotation(Component.class);
-                beanName = component.value();
-                BeanDifinition beanDifinition = new BeanDifinition();
-                Scope scope = clazz.getDeclaredAnnotation(Scope.class);
-                if (scope != null && "prototype".equals(scope.value())) {
-                    beanDifinition.setScope("prototype");
-                }
-                beanDifinition.setScope("single");
-                beanDifinition.setClazz(clazz);
-                beanDifinitionMap.put(beanName,beanDifinition);
+                if (clazz.isAnnotationPresent(Component.class)) {
+                    if (BeanPostProcessor.class.isAssignableFrom(clazz)) {
+                        BeanPostProcessor instance = (BeanPostProcessor) clazz.getDeclaredConstructor().newInstance();
+                        beanPostProcessorList.add(instance);
+                    }
+                    //前面已经获取到了java 的class 对象, 现在要开始对每个java class对象进行注解的解析
+                    Component component = clazz.getDeclaredAnnotation(Component.class);
+                    beanName = component.value();
+                    BeanDifinition beanDifinition = new BeanDifinition();
+                    Scope scope = clazz.getDeclaredAnnotation(Scope.class);
+                    if (scope != null && "prototype".equals(scope.value())) {
+                        beanDifinition.setScope("prototype");
+                    }
+                    beanDifinition.setScope("single");
+                    beanDifinition.setClazz(clazz);
+                    beanDifinitionMap.put(beanName,beanDifinition);
 
+                }
             } catch (Exception e) {
                 e.printStackTrace();
             }

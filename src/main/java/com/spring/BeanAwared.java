@@ -1,4 +1,5 @@
 package com.spring;
 
-public class BeanAwared {
+public interface BeanAwared{
+    void setBeanName(String beanName);
 }

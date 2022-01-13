@@ -1,4 +1,5 @@
 package com.xz.service;
 
-public interface AllService {
+public interface OrderService {
+    void methodA();
 }
